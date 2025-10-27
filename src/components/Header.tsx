@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle"; // Importar ThemeToggle
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,13 +44,14 @@ const Header = () => {
             <button onClick={() => scrollToSection("contato")} className="text-foreground hover:text-primary transition-colors">
               Contato
             </button>
-            <Button 
-              variant="hero" 
+            <Button
+              variant="hero"
               size="lg"
               onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento.", "_blank")}
             >
               Solicitar Orçamento
             </Button>
+            <ThemeToggle /> {/* Adicionar ThemeToggle aqui */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,13 +84,16 @@ const Header = () => {
             <button onClick={() => scrollToSection("contato")} className="text-foreground hover:text-primary transition-colors text-left">
               Contato
             </button>
-            <Button 
-              variant="hero" 
+            <Button
+              variant="hero"
               className="w-full"
               onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento.", "_blank")}
             >
               Solicitar Orçamento
             </Button>
+            <div className="flex justify-start pt-2"> {/* Adicionar ThemeToggle aqui (mobile) */}
+              <ThemeToggle />
+            </div>
           </div>
         )}
       </nav>
