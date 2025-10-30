@@ -1,73 +1,39 @@
-# Welcome to your Lovable project
+# NEXA - Soluções Digitais (Landing Page)
 
-## Project info
+Landing page profissional desenvolvida para a **NEXA - Soluções Digitais**, a marca de Breno Robin para serviços de desenvolvimento web. O site é projetado para capturar leads, mostrar portfólio e detalhar os serviços oferecidos.
 
-**URL**: https://lovable.dev/projects/e58c1ec5-cca6-45b4-b09a-5ce296cf40f7
+Este projeto foi construído do zero usando Vite, React, TypeScript e shadcn/ui.
 
-## How can I edit this code?
+## 🚀 Seções da Página
 
-There are several ways of editing your application.
+A landing page é uma "single page application" (SPA) com navegação por scroll, dividida nas seguintes seções:
 
-**Use Lovable**
+* **Início (Hero):** Seção principal com imagem de fundo e chamada para ação (CTA).
+* **Planos:** Apresentação dos pacotes de serviços com preços promocionais.
+* **Sobre:** Apresentação do desenvolvedor Breno Robin, sua formação e jornada.
+* **Projetos:** Galeria de portfólio com links para projetos concluídos.
+* **Processo:** Detalhamento do processo de trabalho em etapas.
+* **Depoimentos:** Prova social com feedback de clientes.
+* **Dúvidas (FAQ):** Acordeão com perguntas frequentes.
+* **Contato (CTA):** Seção final com informações de contato e formulário para envio de mensagem via WhatsApp.
+* **Rodapé:** Links de navegação e informações de contato.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e58c1ec5-cca6-45b4-b09a-5ce296cf40f7) and start prompting.
+## ✨ Funcionalidades
 
-Changes made via Lovable will be committed automatically to this repo.
+* **Modo Claro e Escuro:** Alternância de tema com `next-themes`.
+* **Totalmente Responsivo:** Design adaptável para desktop, tablets e dispositivos móveis (ex: `md:grid-cols-2`, `sm:text-xl`).
+* **Formulário de Contato:** Validação com `zod` e `react-hook-form` que gera um link `wa.me` personalizado.
+* **Consentimento de Cookies (LGPD):** Banner de consentimento que controla o uso de cookies funcionais (para o toast proativo e estado do sidebar).
+* **Toast Proativo:** Notificação `sonner` que aparece após um tempo para engajar o usuário.
+* **Otimizado para SEO & Redes Sociais:** Meta tags (Open Graph, Twitter Cards) e `favicon` configurados no `index.html`.
 
-**Use your preferred IDE**
+## 🛠️ Tecnologias Utilizadas
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e58c1ec5-cca6-45b4-b09a-5ce296cf40f7) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+* **Vite:** Build tool.
+* **React:** Biblioteca principal.
+* **TypeScript:** Superset do JavaScript.
+* **Tailwind CSS:** Framework de estilização.
+* **shadcn/ui:** Coleção de componentes (usados como base).
+* **react-hook-form / zod:** Para validação de formulários.
+* **sonner:** Para notificações (toasts).
+* **next-themes:** Para alternância de tema claro/escuro.
