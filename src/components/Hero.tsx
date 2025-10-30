@@ -25,7 +25,7 @@ const Hero = () => {
             variant="hero" // Usando a variante 'hero' existente para destaque
             size="lg"
             className="text-lg px-10 py-4 h-auto" // Removida margem top para alinhar com texto esquerdo
-            onClick={() => window.open("https://wa.me/5511999999999?text=Quero meu site agora!", "_blank")}
+            onClick={() => window.open("https://wa.me/5516988392871?text=Quero meu site agora!", "_blank")}
           >
             Quero meu site agora!
           </Button>

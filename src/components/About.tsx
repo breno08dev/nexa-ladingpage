@@ -14,13 +14,13 @@ const About = () => {
               </span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Sou <span className="font-semibold text-foreground">Breno</span>, desenvolvedor front-end e fundador da NEXA. Minha missão é ajudar empresas e empreendedores a transformarem suas ideias em presença digital real, com sites rápidos, modernos e que vendem.
+              Sou <span className="font-semibold text-foreground">Breno</span>, desenvolvedor front-end e fundador da CONECT NEXA. Minha missão é ajudar empresas e empreendedores a transformarem suas ideias em presença digital real, com sites rápidos, modernos e que vendem.
             </p>
             {/* Seção Atualizada: Skills */}
             <div>
               <h4 className="text-xl font-semibold mb-2 text-foreground">Habilidades Técnicas e Pessoais:</h4>
               <p className="text-muted-foreground leading-relaxed">
-                Domino tecnologias como React, TypeScript, Tailwind CSS e [Outras Skills Técnicas]. Além disso, valorizo a comunicação clara, a colaboração e a busca contínua por aprendizado ([Outras Soft Skills]), garantindo que cada projeto seja tratado com profissionalismo e atenção aos detalhes para que sua marca se destaque.
+                Domino tecnologias como React, TypeScript, Tailwind CSS, JavaScript e Node.js. Além disso, valorizo a comunicação clara, a colaboração e a busca contínua por aprendizado, garantindo que cada projeto seja tratado com profissionalismo e atenção aos detalhes para que sua marca se destaque.
               </p>
             </div>
           </div>
@@ -36,7 +36,7 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Formado em [Seu Curso] pela [Sua Instituição]. Aqui você pode detalhar um pouco mais sobre sua formação, cursos relevantes ou especializações.
+                  Formado em Análise e Desenvolvimento de Sistemas pela Universidade Moura Lacerda em Ribeirão Preto/SP. Durante minha graduação, adquiri conhecimentos sólidos em desenvolvimento front-end, back-end e soluções web, além de práticas de projetos ágeis, design de interfaces e integração de sistemas. Estou sempre em busca de novos aprendizados e atualizações para entregar soluções digitais modernas e eficientes.
                 </p>
               </CardContent>
             </Card>
@@ -50,7 +50,7 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Com [Tempo] de experiência, já atuei em [Tipos de Projetos/Empresas], desenvolvendo soluções como [Exemplos de Soluções]. Busco sempre aplicar as melhores práticas para entregar resultados de alto impacto.
+                  Com experiência prática em desenvolvimento de sistemas, sites e aplicações web, já atuei em projetos próprios e para clientes, criando soluções como sistemas de gestão, micro-SaaS e landing pages. Meu foco é aplicar boas práticas de desenvolvimento e tecnologia de forma estratégica, gerando resultados eficientes e de alto impacto para empresas e negócios.
                 </p>
               </CardContent>
             </Card>

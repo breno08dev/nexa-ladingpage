@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "@/components/ThemeToggle"; // Importar ThemeToggle
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +10,7 @@ const Header = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
+      setIsMenuOpen(false); // Fecha o menu mobile após clicar em um item
     }
   };
 
@@ -19,9 +19,15 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              NEXA
-            </h1>
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="bg-transparent border-none p-0 cursor-pointer"
+              aria-label="Voltar ao topo"
+            >
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                CONECT NEXA
+              </h1>
+            </button>
           </div>
 
           {/* Desktop Menu */}
@@ -32,8 +38,14 @@ const Header = () => {
             <button onClick={() => scrollToSection("planos")} className="text-foreground hover:text-primary transition-colors">
               Planos
             </button>
-            <button onClick={() => scrollToSection("sobre")} className="text-foreground hover:text-primary transition-colors">
+             <button onClick={() => scrollToSection("sobre")} className="text-foreground hover:text-primary transition-colors">
               Sobre
+            </button>
+            <button onClick={() => scrollToSection("projetos")} className="text-foreground hover:text-primary transition-colors">
+              Projetos
+            </button>
+            <button onClick={() => scrollToSection("processo")} className="text-foreground hover:text-primary transition-colors">
+              Processo
             </button>
             <button onClick={() => scrollToSection("depoimentos")} className="text-foreground hover:text-primary transition-colors">
               Depoimentos
@@ -47,11 +59,11 @@ const Header = () => {
             <Button
               variant="hero"
               size="lg"
-              onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento.", "_blank")}
+              onClick={() => window.open("https://wa.me/5516988392871?text=Olá! Gostaria de solicitar um orçamento.", "_blank")}
             >
               Solicitar Orçamento
             </Button>
-            <ThemeToggle /> {/* Adicionar ThemeToggle aqui */}
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -75,6 +87,12 @@ const Header = () => {
             <button onClick={() => scrollToSection("sobre")} className="text-foreground hover:text-primary transition-colors text-left">
               Sobre
             </button>
+             <button onClick={() => scrollToSection("projetos")} className="text-foreground hover:text-primary transition-colors text-left">
+               Projetos
+             </button>
+             <button onClick={() => scrollToSection("processo")} className="text-foreground hover:text-primary transition-colors text-left">
+               Processo
+             </button>
             <button onClick={() => scrollToSection("depoimentos")} className="text-foreground hover:text-primary transition-colors text-left">
               Depoimentos
             </button>
@@ -87,11 +105,11 @@ const Header = () => {
             <Button
               variant="hero"
               className="w-full"
-              onClick={() => window.open("https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento.", "_blank")}
+              onClick={() => window.open("https://wa.me/5516988392871?text=Olá! Gostaria de solicitar um orçamento.", "_blank")}
             >
               Solicitar Orçamento
             </Button>
-            <div className="flex justify-start pt-2"> {/* Adicionar ThemeToggle aqui (mobile) */}
+            <div className="flex justify-start pt-2">
               <ThemeToggle />
             </div>
           </div>

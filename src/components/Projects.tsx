@@ -3,31 +3,40 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
-// --- DADOS DE EXEMPLO ---
-// Substitua estes dados pelos seus projetos reais
-// Recomenda-se criar um arquivo separado (ex: src/data/projects.ts) se a lista for longa
+// --- IMPORTAR IMAGENS DOS PROJETOS ---
+// Importe as imagens reais dos seus projetos aqui.
+// Substitua 'projeto1.png', 'projeto2.png', etc., pelos nomes reais dos seus arquivos.
+// Certifique-se que os arquivos existem em src/assets/
+import projectImage1 from "@/assets/rblanches.png"; // Exemplo
+import projectImage2 from "@/assets/supertec.png"; // Exemplo
+import projectImage3 from "@/assets/teste.png"; // Exemplo
+// Se você não tiver as imagens ainda, pode usar a hero-image como placeholder temporário:
+// import placeholderImage from "@/assets/hero-image.png";
+
+// --- DADOS DOS PROJETOS ---
+// Atualize os dados com informações reais e as imagens importadas
 const projects = [
   {
-    title: "Nome do Projeto 1",
-    description: "Breve descrição do projeto, tecnologias usadas ou o problema que ele resolveu.",
-    imageUrl: "/placeholder-project.png", // Substitua pelo caminho da imagem real (ex: /src/assets/projeto1.png)
-    projectUrl: "https://link-para-o-projeto1.com", // Link para o site ao vivo ou repositório
+    title: "RB LANCHES",
+    description: "Um hub rápido e prático para acessar o cardápio, promoções e fazer pedidos do RB Lanches em um clique. Tudo pensado para agilizar a experiência do cliente.",
+    imageUrl: projectImage1, // Use a variável importada
+    projectUrl: "https://rblanches.site",
   },
   {
-    title: "Nome do Projeto 2",
-    description: "Outra descrição interessante sobre este segundo projeto fantástico.",
-    imageUrl: "/placeholder-project.png", // Substitua pelo caminho da imagem real
-    projectUrl: "https://link-para-o-projeto2.com",
+    title: "SUPERTEC - TELECOM",
+    description: "Página moderna e objetiva, mostrando serviços, valores e depoimentos da Supertec, focada em captar clientes e gerar contato de forma simples e eficaz.",
+    imageUrl: projectImage2, // Use a variável importada
+    projectUrl: "https://supertectelecom.com",
   },
   {
-    title: "Nome do Projeto 3",
-    description: "Mais um projeto para demonstrar suas habilidades e experiência.",
-    imageUrl: "/placeholder-project.png", // Substitua pelo caminho da imagem real
+    title: "EM DESENVOLVIMENTO",
+    description: "Landing page prática e objetiva, mostrando planos, cobertura e benefícios, facilitando que novos clientes conheçam e contratem o serviço rapidamente.",
+    imageUrl: projectImage3, // Use a variável importada
     projectUrl: "https://link-para-o-projeto3.com",
   },
-  // Adicione mais projetos aqui
+  // Adicione mais projetos aqui, importando as respectivas imagens
 ];
-// --- FIM DOS DADOS DE EXEMPLO ---
+// --- FIM DOS DADOS DOS PROJETOS ---
 
 
 const Projects = () => {
@@ -47,27 +56,25 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="group overflow-hidden border-border hover:border-primary transition-all duration-300 hover:shadow-[var(--shadow-card)] animate-fade-in rounded-xl" // Adicionado group e overflow-hidden
+              className="group overflow-hidden border-border hover:border-primary transition-all duration-300 hover:shadow-[var(--shadow-card)] animate-fade-in rounded-xl"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="relative aspect-video overflow-hidden"> {/* Container para imagem com aspect ratio */}
+              <div className="relative aspect-video overflow-hidden">
                 <img
-                  src={project.imageUrl}
+                  src={project.imageUrl} // Agora usa a variável importada
                   alt={project.title}
-                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" // Efeito de zoom no hover
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
-                {/* Overlay opcional que aparece no hover */}
                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                   {/* Pode adicionar texto ou botões aqui que só aparecem no hover */}
                  </div>
               </div>
               <CardContent className="p-6 space-y-3">
                 <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
-                <p className="text-muted-foreground text-sm line-clamp-3">{project.description}</p> {/* Limita a descrição a 3 linhas */}
+                <p className="text-muted-foreground text-sm line-clamp-3">{project.description}</p>
                 <Button
                     variant="outline"
                     size="sm"
-                    asChild /* Permite que o botão aja como um link */
+                    asChild
                     className="mt-4 group/link"
                 >
                   <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">

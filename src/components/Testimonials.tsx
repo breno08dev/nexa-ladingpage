@@ -3,24 +3,25 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Maria Silva",
-    role: "Proprietária - Studio Beleza",
-    text: "A NEXA transformou minha presença digital. Hoje recebo clientes todos os dias através do meu site!",
+    name: "Rici",
+    role: "Proprietária - RB Lanches",
+    text: "O hub de links do RB Lanches facilitou demais a vida dos meus clientes. Pedidos e promoções agora chegam rapidinho!",
     rating: 5,
   },
   {
-    name: "João Oliveira",
-    role: "Gerente - Café & Companhia",
-    text: "Profissionalismo e agilidade na entrega. O site ficou exatamente como imaginei, só que melhor!",
+    name: "Giliard Silva",
+    role: "CEO - SuperTec-Telecom",
+    text: "A landing page da Supertec deixou tudo claro e objetivo. Captei novos clientes rapidamente e a navegação é super prática.",
     rating: 5,
   },
   {
-    name: "Ana Costa",
-    role: "CEO - FitLife Academia",
-    text: "Investimento que valeu cada centavo. Nossos resultados aumentaram significativamente após o novo site.",
+    name: "Edson ",
+    role: "Gerente - Sea Fiber Network",
+    text: "Investir na landing page foi a melhor escolha. Os visitantes entendem os planos de forma rápida e já entram em contato na hora!",
     rating: 5,
   },
 ];
+
 
 const Testimonials = () => {
   return (

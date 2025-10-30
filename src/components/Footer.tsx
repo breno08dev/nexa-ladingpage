@@ -1,3 +1,4 @@
+// src/components/Footer.tsx
 import { Instagram, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
@@ -7,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
-              NEXA
+              CONECT NEXA
             </h3>
             <p className="text-muted-foreground">
               Conectamos ideias ao digital
@@ -23,13 +24,23 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="#sobre" className="text-muted-foreground hover:text-primary transition-colors">
+                  Sobre
+                </a>
+              </li>
+              <li>
                 <a href="#planos" className="text-muted-foreground hover:text-primary transition-colors">
                   Planos
                 </a>
               </li>
               <li>
-                <a href="#sobre" className="text-muted-foreground hover:text-primary transition-colors">
-                  Sobre
+                <a href="#projetos" className="text-muted-foreground hover:text-primary transition-colors">
+                  Projetos
+                </a>
+              </li>
+              <li>
+                <a href="#processo" className="text-muted-foreground hover:text-primary transition-colors">
+                  Processo
                 </a>
               </li>
               <li>
@@ -44,7 +55,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 text-foreground">Contato</h4>
             <div className="space-y-3">
               <a
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/5516988392871" // Número Atualizado
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
@@ -53,7 +64,7 @@ const Footer = () => {
                 <span>WhatsApp</span>
               </a>
               <a
-                href="https://instagram.com/nexa.digital"
+                href="https://instagram.com/breno.robin" // Usuário Atualizado
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
@@ -62,11 +73,11 @@ const Footer = () => {
                 <span>Instagram</span>
               </a>
               <a
-                href="mailto:contato@nexa.digital"
+                 // Email Atualizado
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="h-5 w-5" />
-                <span>E-mail</span>
+                <p>dev.brenorobin@hotmail.com</p>
               </a>
             </div>
           </div>

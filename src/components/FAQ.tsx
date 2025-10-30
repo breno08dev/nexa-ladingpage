@@ -12,11 +12,11 @@ const faqs = [
   },
   {
     question: "Vocês oferecem suporte após a entrega?",
-    answer: "Sim! Todos os nossos planos incluem suporte técnico. Os planos superiores contam com suporte prioritário e manutenções inclusas.",
+    answer: "Sim! Todos os nossos planos incluem suporte técnico. Os planos superiores contam com manutenções inclusas no primeiro mês.",
   },
   {
     question: "Posso parcelar no cartão?",
-    answer: "Sim! Aceitamos pagamento em até 10x no cartão de crédito sem juros, facilitando o investimento no seu projeto digital.",
+    answer: "Sim! Aceitamos pagamento em até 12x no cartão de crédito (com juros da maquininha), facilitando o investimento no seu projeto digital.",
   },
   {
     question: "O domínio é realmente grátis?",
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     question: "Posso fazer alterações no site depois de pronto?",
-    answer: "Claro! Oferecemos pacotes de manutenção mensal ou você pode solicitar alterações pontuais conforme sua necessidade.",
+    answer: "Claro! Oferecemos pacotes de ajustes ou você pode solicitar alterações pontuais conforme sua necessidade.",
   },
   {
     question: "Meu site vai funcionar em celulares?",
