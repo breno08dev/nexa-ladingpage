@@ -10,7 +10,7 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold">
               Quem está por trás da{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                NEXA
+                CONECT NEW
               </span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">

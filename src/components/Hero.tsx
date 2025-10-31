@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/new.png"; // Importar a imagem de fundo
+import heroImage from "@/assets/new.webp"; // Importar a imagem de fundo
 
 const Hero = () => {
   return (

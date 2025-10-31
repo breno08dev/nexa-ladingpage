@@ -25,7 +25,7 @@ const Header = () => {
               aria-label="Voltar ao topo"
             >
               <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                CONECT NEXA
+                CONECT NEW
               </h1>
             </button>
           </div>

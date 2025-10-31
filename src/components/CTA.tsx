@@ -20,7 +20,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 // --- Importar a imagem de fundo ---
-import ctaBgImage from "@/assets/teste2.png"; // <<< Verifique se 'teste2.png' existe em src/assets >>>
+import ctaBgImage from "@/assets/hero-image.webp"; // <<< Verifique se 'teste2.png' existe em src/assets >>>
 
 // Schema de validação (Apenas Nome e Mensagem)
 const whatsappFormSchema = z.object({
@@ -48,7 +48,7 @@ const CTA = () => {
 
   // Função onSubmit (sem alterações)
   function onSubmit(values: z.infer<typeof whatsappFormSchema>) {
-    const text = `Olá NEXA, meu nome é ${values.name}. Gostaria de falar sobre: ${values.message}`;
+    const text = `Olá, meu nome é ${values.name}. Gostaria de falar sobre: ${values.message}`;
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
     window.open(whatsappUrl, "_blank");

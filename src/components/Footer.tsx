@@ -8,10 +8,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
-              CONECT NEXA
+              CONECT NEW
             </h3>
             <p className="text-muted-foreground">
-              Conectamos ideias ao digital
+              Conectamos você e sua empresa ao Digital
             </p>
           </div>
 

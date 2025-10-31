@@ -45,7 +45,7 @@ const plans = [
       "Design Profissional",
       "Integração com Redes Sociais",
       "Até 8 Sessões de Criação",
-      "Domínio Grátis",
+      "Domínio Grátis (1 ano)",
       "Suporte Técnico",
     ],
     highlighted: true,
@@ -60,7 +60,7 @@ const plans = [
       "Design Profissional",
       "Integração com Redes Sociais",
       "5 Páginas: Home, Blog, Sobre, Serviços, Contato",
-      "Domínio Grátis",
+      "Domínio Grátis (1 ano)",
       "Suporte Técnico", // Adicionado conforme imagem
     ],
     highlighted: false,
