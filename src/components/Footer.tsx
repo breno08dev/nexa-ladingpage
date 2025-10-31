@@ -84,7 +84,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border pt-8 text-center text-muted-foreground">
-          <p>© 2025 NEXA – Conectamos ideias ao digital.</p>
+          <p>© 2025 CONECT NEX – Conectamos você e sua empresa ao Digital.</p>
         </div>
       </div>
     </footer>

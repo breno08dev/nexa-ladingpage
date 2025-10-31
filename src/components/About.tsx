@@ -14,7 +14,7 @@ const About = () => {
               </span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Sou <span className="font-semibold text-foreground">Breno</span>, desenvolvedor front-end e fundador da CONECT NEXA. Minha missão é ajudar empresas e empreendedores a transformarem suas ideias em presença digital real, com sites rápidos, modernos e que vendem.
+              Sou <span className="font-semibold text-foreground">Breno</span>, desenvolvedor front-end e fundador da CONECT NEW. Minha missão é ajudar empresas e empreendedores a transformarem suas ideias em presença digital real, com sites rápidos, modernos e que vendem.
             </p>
             {/* Seção Atualizada: Skills */}
             <div>

@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative flex items-center justify-center h-[80vh] bg-cover bg-center px-4" // Alterado para h-[80vh]
+      className="relative flex items-center justify-center min-h-[80vh] bg-cover bg-center px-4 pt-20" // Alterado de h-[80vh] para min-h-[80vh] e adicionado pt-20
       style={{ backgroundImage: `url(${heroImage})` }} // Aplicar imagem de fundo
     >
       {/* Overlay escuro para melhor legibilidade do texto */}
