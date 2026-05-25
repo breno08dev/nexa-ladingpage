@@ -1,74 +1,52 @@
 // src/components/Plans.tsx
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
 
-// Número de WhatsApp para usar nos links
-const WHATSAPP_NUMBER_PLANS = "5516988392871"; // Incluindo código do país (55)
+const WHATSAPP_NUMBER_PLANS = "5516988392871"; 
 
-// Atualizando a estrutura de dados dos planos para incluir o preço original
 const plans = [
   {
-    name: "Site de Links",
-    originalPrice: "R$ 359,00", // Preço original adicionado
-    price: "R$ 259,00",
+    name: "Blog / Portfólio",
+    price: "R$ 498,00",
     features: [
-      "100% Seguro (HTTPS)",
-      "Hospedagem grátis 1 ano",
-      "Design Profissional",
-      "Integração com Redes Sociais",
-      "Domínio Grátis (1 ano)", // Adicionado (1 ano) conforme imagem
-    ],
-    highlighted: false,
-  },
-  {
-    name: "Landing Page Básica",
-    originalPrice: "R$ 597,00", // Preço original adicionado
-    price: "R$ 497,00",
-    features: [
-      "100% Seguro (HTTPS)",
-      "Hospedagem grátis 1 ano",
-      "Design Profissional",
-      "Integração com Redes Sociais",
-      "4 Sessões de Criação",
-      "Domínio Grátis (1 ano)", // Adicionado (1 ano) conforme imagem
-    ],
-    highlighted: false,
-  },
-  {
-    name: "Landing Page Alta Conversão",
-    originalPrice: "R$ 897,00", // Preço original adicionado
-    price: "R$ 797,00",
-    features: [
-      "100% Seguro (HTTPS)",
-      "Hospedagem grátis 1 ano",
-      "Design Profissional",
-      "Integração com Redes Sociais",
-      "Até 8 Sessões de Criação",
+      "Hospedagem Grátis (1 ano)",
       "Domínio Grátis (1 ano)",
-      "Suporte Técnico",
+      "100% Seguro (HTTPS)",
+      "Design Responsivo",
+      "Integração com Redes Sociais",
+    ],
+    highlighted: false,
+  },
+  {
+    name: "Landing Page (5 divisões)",
+    price: "R$ 798,00",
+    features: [
+      "Hospedagem Grátis (1 ano)",
+      "Domínio Grátis (1 ano)",
+      "100% Seguro (HTTPS)",
+      "Até 5 divisões estratégicas",
+      "Design Alta Conversão",
+      "Botão WhatsApp flutuante",
     ],
     highlighted: true,
   },
   {
     name: "Site Institucional",
-    originalPrice: "R$1.597,00", // Preço original adicionado
-    price: "R$1.497,00",
+    price: "R$ 1.590,00",
     features: [
-      "100% Seguro (HTTPS)",
-      "Hospedagem grátis 1 ano",
-      "Design Profissional",
-      "Integração com Redes Sociais",
-      "5 Páginas: Home, Blog, Sobre, Serviços, Contato",
+      "Hospedagem Grátis (1 ano)",
       "Domínio Grátis (1 ano)",
-      "Suporte Técnico", // Adicionado conforme imagem
+      "100% Seguro (HTTPS)",
+      "Múltiplas Páginas",
+      "Design Profissional Exclusivo",
+      "Suporte Técnico",
     ],
     highlighted: false,
   },
 ];
 
 const Plans = () => {
-  // Função para gerar a URL do WhatsApp com mensagem personalizada
   const generateWhatsAppLink = (planName: string) => {
     const baseText = "Olá! Tenho interesse no plano";
     const encodedText = encodeURIComponent(`${baseText} ${planName}. Gostaria de mais informações.`);
@@ -76,69 +54,65 @@ const Plans = () => {
   };
 
   return (
-    <section id="planos" className="py-20 px-4 bg-muted/30">
-      <div className="container mx-auto max-w-7xl">
+    <section id="planos" className="py-20 px-4 bg-[#050505] relative overflow-hidden">
+      {/* LUZES NEON DE FUNDO */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-900/15 rounded-full blur-[150px] pointer-events-none" />
+
+      <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Escolha o plano ideal para o seu negócio
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Soluções completas para transformar sua presença digital
+          <p className="text-xl text-zinc-400">
+            Soluções completas com domínio e hospedagem inclusos por 1 ano.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 items-center"> {/* Adicionado items-center para alinhar verticalmente */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 items-center max-w-5xl mx-auto"> 
           {plans.map((plan, index) => (
             <Card
               key={index}
-              className={`flex flex-col relative transition-all duration-300 hover:shadow-2xl ${
+              className={`flex flex-col relative transition-all duration-500 backdrop-blur-md ${
                 plan.highlighted
-                  ? "border-primary border-2 shadow-[var(--shadow-glow)] scale-105 lg:scale-105 z-10" // Adicionado scale-105 e z-10
-                  : "hover:border-primary hover:scale-105" // Movido hover:scale-105 para cá
+                  ? "bg-purple-900/10 border-purple-500/50 shadow-2xl shadow-purple-900/20 scale-105 lg:scale-105 z-10" 
+                  : "bg-white/[0.02] border-white/5 hover:border-purple-500/30 hover:scale-105 hover:bg-white/[0.04]" 
               }`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {plan.highlighted && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-semibold z-20"> {/* Aumentado z-index do selo */}
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold z-20 flex items-center gap-1 shadow-lg shadow-purple-500/25 border border-purple-400/30"> 
+                  <Sparkles className="w-4 h-4" />
                   Mais Popular
                 </div>
               )}
-              <CardHeader className="pt-10"> {/* Aumentado padding top ainda mais por causa do selo e escala */}
-                <CardTitle className="text-2xl">{plan.name}</CardTitle>
+              <CardHeader className="pt-10"> 
+                <CardTitle className="text-2xl text-white">{plan.name}</CardTitle>
                 <CardDescription className="mt-2">
-                  {/* Preço Original Riscado */}
-                  {plan.originalPrice && (
-                     <span className="text-muted-foreground line-through text-lg mr-2">
-                       {plan.originalPrice}
-                     </span>
-                  )}
-                  {/* Preço Promocional */}
-                  <span className="text-3xl font-bold text-primary">
+                  <span className={`text-4xl font-bold ${plan.highlighted ? 'text-purple-400' : 'text-white'}`}>
                     {plan.price}
                   </span>
                 </CardDescription>
               </CardHeader>
-              {/* Adicionado flex-grow para empurrar o footer para baixo */}
+              
               <CardContent className="flex-grow">
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <Check className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{feature}</span>
+                    <li key={i} className="flex items-start gap-3">
+                      <div className={`mt-1 p-1 rounded-full ${plan.highlighted ? 'bg-purple-500/20' : 'bg-white/5'}`}>
+                        <Check className={`h-4 w-4 flex-shrink-0 ${plan.highlighted ? 'text-purple-400' : 'text-zinc-400'}`} />
+                      </div>
+                      <span className="text-sm text-zinc-300 leading-tight pt-1">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
               <CardFooter>
                 <Button
-                  variant={plan.highlighted ? "hero" : "default"}
-                  className="w-full"
-                  onClick={() =>
-                    window.open(
-                      generateWhatsAppLink(plan.name), // Usa a função para gerar link
-                      "_blank"
-                    )
-                  }
+                  variant={plan.highlighted ? "default" : "outline"}
+                  size="lg"
+                  className={`w-full ${plan.highlighted ? 'bg-purple-600 hover:bg-purple-700 text-white border-none' : 'border-white/10 text-white hover:bg-white/10 hover:text-white'}`}
+                  onClick={() => window.open(generateWhatsAppLink(plan.name), "_blank")}
                 >
                   Escolher Plano
                 </Button>
@@ -147,8 +121,26 @@ const Plans = () => {
           ))}
         </div>
 
-        <p className="text-center text-lg text-muted-foreground">
-          Hospedagem e Domínio Grátis. Pague em até <span className="font-semibold text-primary">12x no cartão</span>.
+        {/* ORÇAMENTO PERSONALIZADO (DARK THEME) */}
+        <div className="max-w-4xl mx-auto mt-16 p-8 rounded-2xl bg-white/[0.02] backdrop-blur-md border border-white/10 flex flex-col md:flex-row items-center justify-between shadow-2xl relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="mb-6 md:mb-0 text-center md:text-left relative z-10">
+            <h3 className="text-2xl font-bold text-white mb-2">Quer criar algo totalmente novo?</h3>
+            <p className="text-zinc-400 max-w-lg">
+              Para você que tem uma ideia inovadora e precisa de um sistema sob medida. Faça um orçamento sem compromisso.
+            </p>
+          </div>
+          <Button 
+            size="lg" 
+            className="whitespace-nowrap px-8 bg-white text-black hover:bg-zinc-200 relative z-10"
+            onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER_PLANS}?text=${encodeURIComponent("Olá! Gostaria de fazer um orçamento para um projeto personalizado, totalmente novo.")}`, "_blank")}
+          >
+            Orçamento Personalizado
+          </Button>
+        </div>
+
+        <p className="text-center text-sm text-zinc-500 mt-8">
+          Aceitamos pagamentos em até <span className="font-semibold text-purple-400">12x no cartão</span>.
         </p>
       </div>
     </section>
